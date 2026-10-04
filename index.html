@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body id="top">
 
@@ -280,44 +280,63 @@
       <div class="section-head center reveal">
         <span class="eyebrow">How campaign works</span>
         <h2 id="campaign-title" class="display-lg">Hoardings, ads and <em>newspapers</em></h2>
-        <p class="lead center">We take the message to where people already are — on the road, in the press and on screen.</p>
+        <p class="lead center">We take the message to where people already are — on the road, in the press and on screen. Tap any tile to see it full size.</p>
       </div>
 
-      <div class="campaign-grid">
-        <figure class="campaign-item campaign-item--wide reveal">
-          <a href="assets/img/campaign/hoarding.jpg" data-lightbox><img src="assets/img/campaign/hoarding.jpg" alt="Chirag Indians hoarding at the golchakkar in Jamshedpur: 'Netradaan kijiye — Chirag bujhne na dein', with Roshni's contact number" loading="lazy" width="1280" height="963"></a>
-          <figcaption>Our hoarding at the golchakkar, Jamshedpur</figcaption>
-        </figure>
+      <div class="cgrid">
+        <a class="ctile reveal" href="assets/img/campaign/hoarding.jpg" data-lightbox data-caption="Our hoarding at the golchakkar, Jamshedpur">
+          <span class="ctile__tag">Hoarding</span>
+          <span class="ctile__media"><img src="assets/img/campaign/hoarding.jpg" alt="Chirag Indians hoarding at the golchakkar in Jamshedpur: 'Netradaan kijiye — Chirag bujhne na dein', with Roshni's contact number" loading="lazy" width="1280" height="963"></span>
+          <span class="ctile__cap"><strong>At the golchakkar</strong>Jamshedpur</span>
+        </a>
 
-        <figure class="campaign-item reveal">
-          <a href="assets/img/campaign/roshni-ad.jpg" data-lightbox><img src="assets/img/campaign/roshni-ad.jpg" alt="Advertisement 'Netra ki baat suniye' featuring Roshni, Jamshedpur Eye Hospital — initiated by Chirag Indians" loading="lazy" width="990" height="1400"></a>
-          <figcaption>Featured advertisement with Roshni</figcaption>
-        </figure>
-        <figure class="campaign-item reveal">
-          <a href="assets/img/campaign/marwari-ad.jpg" data-lightbox><img src="assets/img/campaign/marwari-ad.jpg" alt="Advertisement 'Netra ki baat suniye' with Marwari Mahila Manch, Jamshedpur — initiated by Chirag Indians" loading="lazy" width="904" height="1280"></a>
-          <figcaption>Advertisement with Marwari Mahila Manch</figcaption>
-        </figure>
+        <a class="ctile reveal" href="assets/img/campaign/roshni-ad.jpg" data-lightbox data-caption="Featured advertisement with Roshni">
+          <span class="ctile__tag">Advertisement</span>
+          <span class="ctile__media"><img src="assets/img/campaign/roshni-ad.jpg" alt="Advertisement 'Netra ki baat suniye' featuring Roshni, Jamshedpur Eye Hospital — initiated by Chirag Indians" loading="lazy" width="990" height="1400"></span>
+          <span class="ctile__cap"><strong>With Roshni</strong>Jamshedpur Eye Hospital</span>
+        </a>
 
-        <figure class="campaign-item reveal">
-          <a href="assets/img/campaign/roshni-news.jpg" data-lightbox><img src="assets/img/campaign/roshni-news.jpg" alt="Newspaper cutting: Roshni's team collected the corneas of Ritesh Kumar Singh after his death, Jamshedpur" loading="lazy" width="760" height="1095"></a>
-          <figcaption>In the news: Roshni's team honours a family's wish</figcaption>
-        </figure>
-        <figure class="campaign-item reveal">
-          <a href="assets/img/campaign/marwari-news.jpg" data-lightbox><img src="assets/img/campaign/marwari-news.jpg" alt="Newspaper report: launch of the eye donation poster and poem dedicated to the President at Sakchi Ashirwad old age home, Jamshedpur" loading="lazy" width="768" height="838"></a>
-          <figcaption>In the news: Marwari Mahila Manch initiative · <a href="https://sharpbharat.com/information/jamshedpur-marwari-mahila-manch-initiative-jamshedpur-marwari-mahila-manch-initiative-even-after-death-the-world-will-see-the-eyes-of-sharda-devi-bhartiya-an-initiative-of-marwari-mahila-manch-jamshed/587467/" target="_blank" rel="noopener">Read the article on Sharp Bharat ↗</a></figcaption>
-        </figure>
+        <a class="ctile reveal" href="assets/img/campaign/roshni-news.jpg" data-lightbox data-caption="In the news: Roshni's team honours a family's wish">
+          <span class="ctile__tag">Newspaper</span>
+          <span class="ctile__media"><img src="assets/img/campaign/roshni-news.jpg" alt="Newspaper cutting: Roshni's team collected the corneas of Ritesh Kumar Singh after his death, Jamshedpur" loading="lazy" width="760" height="1095"></span>
+          <span class="ctile__cap"><strong>Roshni in the news</strong>A family's wish honoured</span>
+        </a>
 
-        <!-- ASSET NEEDED: the video advertisement. Save it as assets/video/campaign-ads.mp4 and replace the .asset-slot div with:
-             <video controls preload="none" playsinline poster="assets/img/campaign/video-poster.jpg"><source src="assets/video/campaign-ads.mp4" type="video/mp4"></video> -->
-        <figure class="campaign-item campaign-item--wide reveal">
-          <div class="asset-slot asset-slot--wide asset-slot--video" style="background-image:url('assets/img/campaign/video-poster.jpg')"><strong>Advertisement created — video</strong><span>Video file to be added</span></div>
-          <figcaption class="campaign-claim">This ad in regional languages can change the lives of many visionless.</figcaption>
-        </figure>
+        <a class="ctile reveal" href="assets/img/campaign/marwari-ad.jpg" data-lightbox data-caption="Advertisement with Marwari Mahila Manch">
+          <span class="ctile__tag">Advertisement</span>
+          <span class="ctile__media"><img src="assets/img/campaign/marwari-ad.jpg" alt="Advertisement 'Netra ki baat suniye' with Marwari Mahila Manch, Jamshedpur — initiated by Chirag Indians" loading="lazy" width="904" height="1280"></span>
+          <span class="ctile__cap"><strong>With Marwari Mahila Manch</strong>Jamshedpur</span>
+        </a>
 
-        <figure class="campaign-item campaign-item--wide campaign-item--dc reveal">
-          <a href="assets/img/campaign/dc.jpg" data-lightbox><img src="assets/img/campaign/dc.jpg" alt="Lagatar News, 18 October 2024: Jamshedpur Deputy Commissioner appreciates the Chirag Indians eye donation campaign; Om Maddala presents the poem to the DC" loading="lazy" width="768" height="924"></a>
-          <figcaption>Memento presented to the District Collector — Lagatar News, October 2024</figcaption>
-        </figure>
+        <a class="ctile reveal" href="assets/img/campaign/marwari-news.jpg" data-lightbox data-caption="In the news: Marwari Mahila Manch initiative">
+          <span class="ctile__tag">Newspaper</span>
+          <span class="ctile__media"><img src="assets/img/campaign/marwari-news.jpg" alt="Newspaper report: launch of the eye donation poster and poem dedicated to the President at Sakchi Ashirwad old age home, Jamshedpur" loading="lazy" width="768" height="838"></span>
+          <span class="ctile__cap"><strong>Marwari Mahila Manch in the news</strong>Poster launch at Sakchi Ashirwad</span>
+        </a>
+
+        <a class="ctile reveal" href="assets/img/campaign/dc.jpg" data-lightbox data-caption="Memento presented to the District Collector — Lagatar News, October 2024">
+          <span class="ctile__tag">Recognition</span>
+          <span class="ctile__media"><img src="assets/img/campaign/dc.jpg" alt="Lagatar News, 18 October 2024: Jamshedpur Deputy Commissioner appreciates the Chirag Indians eye donation campaign; Om Maddala presents the poem to the DC" loading="lazy" width="768" height="924"></span>
+          <span class="ctile__cap"><strong>Memento to the District Collector</strong>Lagatar News, October 2024</span>
+        </a>
+      </div>
+
+      <p class="center small reveal" style="margin-top:14px"><a href="https://sharpbharat.com/information/jamshedpur-marwari-mahila-manch-initiative-jamshedpur-marwari-mahila-manch-initiative-even-after-death-the-world-will-see-the-eyes-of-sharda-devi-bhartiya-an-initiative-of-marwari-mahila-manch-jamshed/587467/" target="_blank" rel="noopener">Read the Sharp Bharat article on the Marwari Mahila Manch initiative ↗</a></p>
+
+      <!-- ASSET NEEDED: the video advertisement. Save it as assets/video/campaign-ads.mp4 and replace the .cvideo__slot div with:
+           <video controls preload="none" playsinline poster="assets/img/campaign/video-poster.jpg"><source src="assets/video/campaign-ads.mp4" type="video/mp4"></video> -->
+      <div class="cvideo reveal">
+        <div class="cvideo__text">
+          <span class="ctile__tag">Video advertisement</span>
+          <p class="campaign-claim">This ad in regional languages can change the lives of many visionless.</p>
+          <p class="muted" style="margin:0">Six short ads, created by Chirag Indians, in the languages people actually speak at home.</p>
+        </div>
+        <div class="cvideo__media">
+          <div class="cvideo__slot" style="background-image:url('assets/img/campaign/video-poster.jpg')">
+            <span class="cvideo__play" aria-hidden="true">▶</span>
+            <span class="cvideo__note">Video file to be added</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
