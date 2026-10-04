@@ -1,8 +1,8 @@
-# Chirag India — website
+# Chirag Indians — website
 
 A single-page HTML/CSS/JS website. No build step, no framework.
 
-## Run it
+## Run it locally
 
 ```bash
 cd site
@@ -10,16 +10,20 @@ python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000. Or just double-click `index.html`.
-To go live, upload the contents of `site/` to any static host.
+The site is deployed from the `main` branch of the GitHub repo.
 
 ## Files
 
 | Path             | What it is                                              |
 |------------------|---------------------------------------------------------|
-| `index.html`     | The whole site (hero → problem → how it works → myths → impact → story → who we are → donate → FAQ → join → stories → pledge form) |
+| `index.html`     | The whole site: hero → the problem → myths → featured story → who we are → how campaign works → donate your eyes → FAQ → join → stories gallery |
 | `css/style.css`  | All styling. Colours and fonts are variables at the top. |
-| `js/main.js`     | Nav, counters, gallery filters, lightbox, form handling. Contact details and numbers live in the `SITE` block at the top. |
+| `js/main.js`     | Nav, gallery filters, lightbox. Contact details live in the `SITE` block at the top. |
 | `assets/`        | Logo, web-sized photos (`img/<album>/`), transcoded videos (`video/`). |
+| `about.html` etc.| Tiny redirect stubs so old links still land on the right section. |
+
+Every **Pledge Now** button links to the official NOTTO Donor Pledge Portal
+(https://notto.abdm.gov.in/). There is no pledge form on the site.
 
 ## Changing colours or fonts
 
@@ -30,30 +34,31 @@ Edit the variables in `:root` at the top of `css/style.css`:
 - `--cream`, `--sand` — page and alternate section backgrounds
 - `--font-display`, `--font-body` — heading and body fonts (Google Fonts link is in the `<head>` of `index.html`)
 
-## Things to fill in before going live
+## Still to fill in
 
-All contact details and numbers are in **one place**: the `SITE` block at the
-top of `js/main.js`.
+**Contact details** — the `SITE` block at the top of `js/main.js`:
+WhatsApp number and email are placeholders. The helpline is NOTTO's toll-free
+1800-11-4770.
 
-1. **Helpline number, WhatsApp number, email** — replace the `00000` placeholders.
-2. **Impact numbers** (eyes pledged, families reached, corneas donated).
-3. **Pledge form delivery** — pick one:
-   - *Recommended:* create a free form at <https://formspree.io>, copy the
-     endpoint (looks like `https://formspree.io/f/abcdwxyz`) into `formEndpoint`.
-     Submissions arrive by email.
-   - *Or* leave `formEndpoint` empty. The form then opens WhatsApp with the
-     details pre-filled and the person taps "send".
-4. The amber banner in the "Who we are" section has `[year]`, `[founder]` and `[X] cities`.
-5. The trust-markers row has placeholder chips for partner eye bank logos and
-   government recognition. Replace with `<img>` logos.
-6. The featured story cite says "A pledger" — put the real name and city.
-7. The hero photo is a school pledge photo. The brief asked for the "children
-   praying" photo — save it as `assets/img/hero.jpg` and change the `<img src>`
-   in the hero section.
-8. The gallery has "Photos coming soon" tiles for albums that had no photos in
-   the source folders: Marwari Samaj photograph, President memento, Sister
-   award presentation, DC presentation, Poster movement, Featured ad with Roshni.
-   Delete those tiles once real photos are added.
+**Photos and videos that are still missing.** Each spot in `index.html` is a
+dashed box with a label; search the file for `asset-slot` and `ASSET NEEDED`.
+
+| Where                         | What to add                                                   |
+|-------------------------------|---------------------------------------------------------------|
+| Featured story                | Photo of the framed poem dedicated to the Hon'ble President   |
+| How campaign works            | Hoarding at the golchakkar                                    |
+| How campaign works            | Roshni advertisement + newspaper cutting about it             |
+| How campaign works            | Marwari Mahila Manch advertisement + newspaper news about it  |
+| How campaign works            | The video ad (6 ads), ideally one MP4 under ~15 MB            |
+| How campaign works            | Picture with the DC                                           |
+| Stories gallery               | President memento, Sister award, DC presentation, Poster movement, Marwari Samaj photograph |
+| Who we are                    | Exact YouTube channel URL for Om Maddala (@aapkejazbaat) — currently a YouTube search link |
+| Hero                          | The "children praying" photo, if still wanted (a school pledge photo is used now) |
+
+To place a photo: save it under `assets/img/campaign/` (or `assets/img/`),
+then replace the matching `<div class="asset-slot">…</div>` with
+`<img src="assets/img/campaign/hoarding.jpg" alt="…">`. For the video, use
+`<video controls playsinline src="assets/video/campaign-ads.mp4"></video>`.
 
 ## Adding a photo to the gallery
 
@@ -69,14 +74,5 @@ copy (max ~720px) as `assets/img/<album>/thumb/NN.jpg`. Then add a tile inside
 ```
 
 `data-cat` must be one of `ground`, `recognition`, `spreading` — that's what the
-filter chips use. `width`/`height` should match the thumbnail's real size so the
-wall doesn't jump while loading.
-
-For a video, use `class="pin pin--video"`, point `href` at the `.mp4`, add
-`data-poster="…jpg"`, and use the poster image as the `<img>`.
-
-## Assets
-
-- Originals are untouched in the parent folder; `assets/img/` holds web copies.
-- `assets/video/public-fridge.mp4` is the largest file (12 MB). Remove its tile
-  from `index.html` if page weight matters.
+filter chips use. For a video, use `class="pin pin--video"`, point `href` at the
+`.mp4`, add `data-poster="…jpg"`, and use the poster image as the `<img>`.

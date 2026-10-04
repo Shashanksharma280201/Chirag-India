@@ -1,31 +1,24 @@
 /* ==========================================================================
-   Chirag India — site script
+   Chirag Indians — site script
    --------------------------------------------------------------------------
-   EDIT THE `SITE` BLOCK BELOW to update contact details, impact numbers and
-   the pledge-form endpoint. Every page reads from it, so you only change it
-   in one place.
+   EDIT THE `SITE` BLOCK BELOW to update contact details. The page reads from
+   it, so you only change it in one place.
    ========================================================================== */
 
 const SITE = {
-  // Contact (placeholders — replace with real values)
-  helpline: "+91 00000 00000",          // emergency helpline shown on Donate page + footer
-  helplineTel: "+910000000000",         // same number, digits only, for tel: links
+  // Emergency helpline shown on the Donate section + footer (NOTTO toll-free)
+  helpline: "1800-11-4770",
+  helplineTel: "18001144770",
+
+  // NGO contact (placeholders — replace with real values)
   whatsapp: "910000000000",             // WhatsApp number in international format, digits only
-  email: "hello@chiragindia.co.in",     // contact email
-  website: "www.chiragindia.co.in",     // as printed on the standee
+  email: "hello@chiragindians.in",      // contact email
 
-  // Impact counters (placeholders — replace with real numbers)
-  impact: {
-    eyesPledged: 5000,
-    familiesReached: 1200,
-    corneasDonated: 320,
-  },
+  // Previous website, mentioned in "Who we are"
+  website: "chiragindia.co.in",
 
-  // Pledge form endpoint.
-  // Option A (recommended, free): create a form at https://formspree.io, then paste
-  //   the endpoint here, e.g. "https://formspree.io/f/abcdwxyz".
-  // Option B: leave blank and the form will open WhatsApp with the details pre-filled.
-  formEndpoint: "",
+  // Official pledge portal — every "Pledge Now" button links here
+  notto: "https://notto.abdm.gov.in/",
 };
 
 /* --------------------------------------------------------------------------
@@ -47,6 +40,7 @@ const SITE = {
     if (key === "tel") el.setAttribute("href", "tel:" + SITE.helplineTel);
     if (key === "mail") el.setAttribute("href", "mailto:" + SITE.email);
     if (key === "whatsapp") el.setAttribute("href", "https://wa.me/" + SITE.whatsapp);
+    if (key === "notto") el.setAttribute("href", SITE.notto);
   });
 })();
 
@@ -83,43 +77,6 @@ const SITE = {
     });
   }, { threshold: 0.12 });
   els.forEach((el) => io.observe(el));
-})();
-
-/* --------------------------------------------------------------------------
-   Impact counters (count up from 0 when scrolled into view)
-   -------------------------------------------------------------------------- */
-(function counters() {
-  const nums = document.querySelectorAll("[data-count]");
-  if (!nums.length) return;
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const fmt = new Intl.NumberFormat("en-IN");
-
-  nums.forEach((el) => {
-    const key = el.getAttribute("data-count");
-    const target = SITE.impact[key] ?? (parseInt(el.textContent, 10) || 0);
-    el.dataset.target = String(target);
-    el.textContent = reduce ? fmt.format(target) : "0";
-  });
-  if (reduce) return;
-
-  const run = (el) => {
-    const target = Number(el.dataset.target);
-    const dur = 1800;
-    const start = performance.now();
-    const step = (now) => {
-      const p = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = fmt.format(Math.round(target * eased));
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
-
-  if (!("IntersectionObserver" in window)) { nums.forEach(run); return; }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((en) => { if (en.isIntersecting) { run(en.target); io.unobserve(en.target); } });
-  }, { threshold: 0.4 });
-  nums.forEach((el) => io.observe(el));
 })();
 
 /* --------------------------------------------------------------------------
@@ -192,57 +149,6 @@ const SITE = {
     if (e.key === "Escape") close();
     if (e.key === "ArrowLeft") move(-1);
     if (e.key === "ArrowRight") move(1);
-  });
-})();
-
-/* --------------------------------------------------------------------------
-   Pledge / contact forms
-   -------------------------------------------------------------------------- */
-(function forms() {
-  document.querySelectorAll("form[data-form]").forEach((form) => {
-    const msg = form.querySelector(".form-msg");
-    const kind = form.getAttribute("data-form"); // "pledge" | "contact"
-    const show = (cls, text) => { if (!msg) return; msg.className = "form-msg " + cls; msg.textContent = text; };
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-      const data = new FormData(form);
-      const btn = form.querySelector('[type="submit"]');
-
-      // Option A: Formspree (or any endpoint that accepts JSON POST)
-      if (SITE.formEndpoint) {
-        btn.disabled = true;
-        show("is-info", "Sending…");
-        try {
-          const res = await fetch(SITE.formEndpoint, {
-            method: "POST",
-            headers: { Accept: "application/json" },
-            body: data,
-          });
-          if (res.ok) {
-            form.reset();
-            show("is-ok", kind === "pledge"
-              ? "Thank you. Your pledge is registered. Now tell your family today — they are the ones who will say yes."
-              : "Thanks — we'll get back to you soon.");
-          } else {
-            show("is-err", "Something went wrong. Please try again or WhatsApp us.");
-          }
-        } catch {
-          show("is-err", "Network error. Please try again or WhatsApp us.");
-        } finally {
-          btn.disabled = false;
-        }
-        return;
-      }
-
-      // Option B: no endpoint configured → open WhatsApp with the details pre-filled
-      const lines = [kind === "pledge" ? "New eye donation pledge — Chirag India" : "Message via chiragindia.co.in"];
-      data.forEach((v, k) => { if (String(v).trim()) lines.push(`${k}: ${v}`); });
-      const url = "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
-      window.open(url, "_blank", "noopener");
-      show("is-info", "We've opened WhatsApp with your details pre-filled. Press send to complete your pledge.");
-    });
   });
 })();
 
