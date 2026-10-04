@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body id="top">
 
@@ -25,12 +25,11 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span></span>Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#about">Who We Are</a>
-      <a href="#campaign">How Campaign Works</a>
       <a href="#donate">Donate Your Eyes</a>
       <a href="#faq">FAQ</a>
-      <a href="#join">Join</a>
+      <a href="#campaign">How Campaign Works</a>
       <a href="#stories">Stories</a>
-      <a class="btn btn--primary" href="https://notto.abdm.gov.in/" target="_blank" rel="noopener">Pledge Now ↗</a>
+      <a class="btn btn--primary" href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener">Pledge Now ↗</a>
     </nav>
   </div>
 </header>
@@ -49,10 +48,11 @@
         <h1 id="hero-title" class="display-xl">Helping visionless<br><em>see the world</em></h1>
         <p class="hero__sub">One person's eyes. Two lives restored.</p>
         <div class="hero__ctas">
-          <a class="btn btn--primary btn--lg" href="https://notto.abdm.gov.in/" target="_blank" rel="noopener">Pledge Now on NOTTO ↗</a>
+          <a class="btn btn--primary btn--lg" href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener">Pledge Now on NOTTO ↗</a>
           <a class="btn btn--outline-light btn--lg" href="#when-the-time-comes">Donate eyes of a loved one</a>
         </div>
         <p class="hero__note">Pledging takes 2 minutes on the Government of India's NOTTO Donor Pledge Portal. It's free. It could give sight to two people.</p>
+        <a class="notto-badge" href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener"><img src="assets/notto-logo.jpg" alt="NOTTO — National Organ and Tissue Transplant Organisation, Government of India" width="263" height="41"><span>Official pledge portal ↗</span></a>
       </div>
     </div>
   </section>
@@ -119,18 +119,12 @@
   <section class="section" aria-labelledby="story-title">
     <div class="wrap">
       <div class="story">
-        <!-- ASSET NEEDED: photo of the poetry frame dedicated to the Hon'ble President.
-             Save it as assets/img/president-poetry.jpg and replace the placeholder div below with:
-             <img src="assets/img/president-poetry.jpg" alt="Framed poem dedicated to the Hon'ble President of India"> -->
-        <div class="story__photo story__photo--frame reveal">
-          <div class="asset-slot">
-            <strong>Poetry dedicated to the Hon'ble President</strong>
-            <span>Photo of the framed poem to be added here</span>
-          </div>
-        </div>
+        <a class="story__photo story__photo--frame reveal" href="assets/img/president-poetry.jpg" data-lightbox>
+          <img src="assets/img/president-poetry.jpg" alt="Poem 'Netra ki Lalsa' dedicated to the Hon'ble President of India, Smt. Droupadi Murmu, by Chirag Indians" loading="lazy" width="375" height="530">
+        </a>
         <div class="reveal">
           <span class="eyebrow">Featured story</span>
-          <h2 id="story-title" class="display-md">Our first brand ambassador</h2>
+          <h2 id="story-title" class="display-md">President memento — <em>our first brand ambassador</em></h2>
           <p class="lead">Hon'ble President of India, Smt. Droupadi Murmu, was our first brand ambassador (unofficially). She has also pledged her eyes. Her office gracefully accepted the frame and acknowledged it.</p>
           <p style="margin-top:1.4rem"><a class="btn btn--teal" href="#stories">See more stories →</a></p>
         </div>
@@ -141,14 +135,14 @@
   <section class="banner" aria-label="Pledge banner">
     <div class="wrap">
       <p class="banner__text">Your eyes don't need you after you're gone. <em>Someone else does.</em></p>
-      <a class="btn btn--primary btn--lg" href="https://notto.abdm.gov.in/" target="_blank" rel="noopener">Pledge Now on NOTTO ↗</a>
+      <a class="btn btn--primary btn--lg" href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener">Pledge Now on NOTTO ↗</a>
     </div>
   </section>
 
   <!-- ============ WHO WE ARE ============ -->
   <section class="section section--white" id="about" aria-labelledby="about-title">
     <div class="wrap">
-      <div class="split">
+      <div class="about-top">
         <div class="reveal">
           <span class="eyebrow">Who we are</span>
           <h2 id="about-title" class="big-claim">We're not a hospital. We're not an eye bank. <em>We are a small bridge between the family of the deceased and the nearest eye bank.</em></h2>
@@ -158,15 +152,24 @@
             <li>Arranging pledges and donor cards</li>
             <li>Appealing to corporates to sponsor events and ads</li>
             <li>Spreading awareness through social media</li>
-            <li>Our founder is also a Shayar (poet) — follow him on YouTube: <a href="https://www.youtube.com/results?search_query=Om+Maddala+aap+ke+jazbaat" target="_blank" rel="noopener">Om Maddala · @aapkejazbaat</a>. We also help raise funds for any noble cause through Shayari stage programmes. Terms &amp; conditions apply.</li>
+            <li>Our founder is also a Shayar (poet) — follow him on YouTube: <a href="https://www.youtube.com/@AapKeJazbaaat" target="_blank" rel="noopener">Om Maddala · @AapKeJazbaaat</a>. We also help raise funds for any noble cause through Shayari stage programmes. Terms &amp; conditions apply.</li>
           </ul>
         </div>
-        <div class="reveal">
+      </div>
+      <div class="grid-2 about-videos">
+        <figure class="media-card reveal">
           <video controls preload="metadata" poster="assets/video/chirag-india.jpg" playsinline>
             <source src="assets/video/chirag-india.mp4" type="video/mp4">
           </video>
-          <p class="small muted center" style="margin-top:10px">Why we do this — a short film by Chirag Indians.</p>
-        </div>
+          <figcaption>Why we do this — a short film by Chirag Indians.</figcaption>
+        </figure>
+        <figure class="media-card reveal">
+          <div class="yt" data-yt="ZCxqykcZY-o">
+            <img src="https://i.ytimg.com/vi/ZCxqykcZY-o/hqdefault.jpg" alt="Om Maddala — Duaon ki Ahmiyat (YouTube video preview)" loading="lazy" width="480" height="360">
+            <button type="button" class="yt__play" aria-label="Play video: Duaon ki Ahmiyat">▶</button>
+          </div>
+          <figcaption>Duaon ki Ahmiyat — Shayari by our founder, Om Maddala. <a href="https://youtu.be/ZCxqykcZY-o" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -174,56 +177,6 @@
   <section class="banner banner--amber banner--stripe" aria-label="Our story in one line">
     <div class="wrap">
       <p class="banner__text">Started in the year <em>2020</em> by <em>Om Maddala &amp; his family.</em></p>
-    </div>
-  </section>
-
-  <!-- ============ HOW CAMPAIGN WORKS ============ -->
-  <!-- ASSETS NEEDED for this section (save under assets/img/campaign/ and replace the .asset-slot divs with <img> tags):
-       hoarding.jpg (hoarding at the golchakkar), roshni-ad.jpg, roshni-news.jpg (newspaper cutting),
-       marwari-ad.jpg (Marwari Mahila Manch advertisement), marwari-news.jpg (newspaper news),
-       assets/video/campaign-ads.mp4 (the 6 video ads), dc.jpg (picture with the DC). -->
-  <section class="section section--sand" id="campaign" aria-labelledby="campaign-title">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow">How campaign works</span>
-        <h2 id="campaign-title" class="display-lg">Hoardings, ads and <em>newspapers</em></h2>
-        <p class="lead center">We take the message to where people already are — on the road, in the press and on screen.</p>
-      </div>
-
-      <div class="campaign-grid">
-        <figure class="campaign-item campaign-item--wide reveal">
-          <div class="asset-slot asset-slot--wide"><strong>Hoarding at the golchakkar</strong><span>Photo to be added</span></div>
-          <figcaption>Our hoarding at the golchakkar</figcaption>
-        </figure>
-
-        <figure class="campaign-item reveal">
-          <div class="asset-slot"><strong>Advertisement — Roshni</strong><span>Photo to be added</span></div>
-          <figcaption>Featured advertisement with Roshni</figcaption>
-        </figure>
-        <figure class="campaign-item reveal">
-          <div class="asset-slot"><strong>Advertisement — Marwari Mahila Manch</strong><span>Photo to be added</span></div>
-          <figcaption>Advertisement with Marwari Mahila Manch</figcaption>
-        </figure>
-
-        <figure class="campaign-item reveal">
-          <div class="asset-slot"><strong>Newspaper cutting — Roshni</strong><span>Image to be added</span></div>
-          <figcaption>In the news: Roshni</figcaption>
-        </figure>
-        <figure class="campaign-item reveal">
-          <div class="asset-slot"><strong>Newspaper news — Marwari Mahila Manch</strong><span>Image to be added</span></div>
-          <figcaption>In the news: Marwari Mahila Manch</figcaption>
-        </figure>
-
-        <figure class="campaign-item campaign-item--wide reveal">
-          <div class="asset-slot asset-slot--wide asset-slot--video"><strong>Video ad (6 ads)</strong><span>Video to be added</span></div>
-          <figcaption class="campaign-claim">This ad in regional languages can change the lives of many visionless.</figcaption>
-        </figure>
-
-        <figure class="campaign-item campaign-item--wide reveal">
-          <div class="asset-slot asset-slot--wide"><strong>With the Deputy Commissioner</strong><span>Photo to be added</span></div>
-          <figcaption>Presenting our campaign to the DC</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
 
@@ -242,7 +195,7 @@
             <h3>Pledge now</h3>
             <p>Takes 2 minutes — online on the NOTTO Donor Pledge Portal, or on a manual form from your nearest eye bank. You get a donor card. A pledge costs nothing and you can withdraw it at any time.</p>
             <p><strong>However, the family of the deceased can donate eyes even without a prior pledge.</strong></p>
-            <a class="btn btn--primary" href="https://notto.abdm.gov.in/" target="_blank" rel="noopener">NOTTO Donor Pledge Portal ↗</a>
+            <a class="btn btn--primary" href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener">NOTTO Donor Pledge Portal ↗</a>
           </div>
         </article>
 
@@ -321,50 +274,51 @@
     </div>
   </section>
 
-  <!-- ============ JOIN THE MOVEMENT ============ -->
-  <section class="section section--sand" id="join" aria-labelledby="join-title">
+  <!-- ============ HOW CAMPAIGN WORKS ============ -->
+  <section class="section section--sand" id="campaign" aria-labelledby="campaign-title">
     <div class="wrap">
       <div class="section-head center reveal">
-        <span class="eyebrow">Join the movement</span>
-        <h2 id="join-title" class="display-lg">Every volunteer counts. <em>Be the next one.</em></h2>
-      </div>
-      <div class="grid-2">
-        <article class="card reveal" id="volunteer">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Volunteer</h3>
-          <p>Run a pledge camp in your society, school or office. Request people to pledge their eyes either online through a trusted source like the NOTTO portal, or manually through the forms supplied by the nearest eye bank — you may also ask us for the forms. Please share your valuable efforts with us, with pictures.</p>
-          <a class="btn btn--teal" data-site-href="whatsapp" href="#" target="_blank" rel="noopener">Sign up on WhatsApp</a>
-        </article>
-        <article class="card reveal" id="sponsor">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-          </div>
-          <h3>Sponsor a drive</h3>
-          <p>Fund one school or society awareness drive. Your contribution covers printing, standees, donor cards, miscellaneous expenses towards organising the camp, and volunteer travel.</p>
-          <a class="btn btn--teal" data-site-href="mail" href="#">Email us to sponsor</a>
-        </article>
+        <span class="eyebrow">How campaign works</span>
+        <h2 id="campaign-title" class="display-lg">Hoardings, ads and <em>newspapers</em></h2>
+        <p class="lead center">We take the message to where people already are — on the road, in the press and on screen.</p>
       </div>
 
-      <article class="card card--dark reveal" id="corporates" style="margin-top:clamp(16px,2.5vw,28px)">
-        <div class="split" style="align-items:start">
-          <div>
-            <span class="eyebrow">For corporates</span>
-            <h3 style="font-size:clamp(1.5rem,3vw,2.2rem)">We run it. You fund it and get the credit.</h3>
-            <ul class="ticks">
-              <li>Your logo on every pledge card, banner and hoarding we put up</li>
-              <li>A ready-made CSR story — outcomes you can actually report</li>
-              <li>Employee pledge camps at your office, run end-to-end by our team</li>
-            </ul>
-            <div class="btn-row">
-              <a class="btn btn--primary" data-site-href="mail" href="#">Talk to us →</a>
-              <a class="btn btn--outline-light" data-site-href="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-          </div>
-          <img src="assets/img/standee/02.jpg" alt="Volunteers standing with a Chirag Indians standee in a housing society" loading="lazy" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover">
-        </div>
-      </article>
+      <div class="campaign-grid">
+        <figure class="campaign-item campaign-item--wide reveal">
+          <a href="assets/img/campaign/hoarding.jpg" data-lightbox><img src="assets/img/campaign/hoarding.jpg" alt="Chirag Indians hoarding at the golchakkar in Jamshedpur: 'Netradaan kijiye — Chirag bujhne na dein', with Roshni's contact number" loading="lazy" width="1280" height="963"></a>
+          <figcaption>Our hoarding at the golchakkar, Jamshedpur</figcaption>
+        </figure>
+
+        <figure class="campaign-item reveal">
+          <a href="assets/img/campaign/roshni-ad.jpg" data-lightbox><img src="assets/img/campaign/roshni-ad.jpg" alt="Advertisement 'Netra ki baat suniye' featuring Roshni, Jamshedpur Eye Hospital — initiated by Chirag Indians" loading="lazy" width="990" height="1400"></a>
+          <figcaption>Featured advertisement with Roshni</figcaption>
+        </figure>
+        <figure class="campaign-item reveal">
+          <a href="assets/img/campaign/marwari-ad.jpg" data-lightbox><img src="assets/img/campaign/marwari-ad.jpg" alt="Advertisement 'Netra ki baat suniye' with Marwari Mahila Manch, Jamshedpur — initiated by Chirag Indians" loading="lazy" width="904" height="1280"></a>
+          <figcaption>Advertisement with Marwari Mahila Manch</figcaption>
+        </figure>
+
+        <figure class="campaign-item reveal">
+          <a href="assets/img/campaign/roshni-news.jpg" data-lightbox><img src="assets/img/campaign/roshni-news.jpg" alt="Newspaper cutting: Roshni's team collected the corneas of Ritesh Kumar Singh after his death, Jamshedpur" loading="lazy" width="760" height="1095"></a>
+          <figcaption>In the news: Roshni's team honours a family's wish</figcaption>
+        </figure>
+        <figure class="campaign-item reveal">
+          <a href="assets/img/campaign/marwari-news.jpg" data-lightbox><img src="assets/img/campaign/marwari-news.jpg" alt="Newspaper report: launch of the eye donation poster and poem dedicated to the President at Sakchi Ashirwad old age home, Jamshedpur" loading="lazy" width="768" height="838"></a>
+          <figcaption>In the news: Marwari Mahila Manch initiative · <a href="https://sharpbharat.com/information/jamshedpur-marwari-mahila-manch-initiative-jamshedpur-marwari-mahila-manch-initiative-even-after-death-the-world-will-see-the-eyes-of-sharda-devi-bhartiya-an-initiative-of-marwari-mahila-manch-jamshed/587467/" target="_blank" rel="noopener">Read the article on Sharp Bharat ↗</a></figcaption>
+        </figure>
+
+        <!-- ASSET NEEDED: the video advertisement. Save it as assets/video/campaign-ads.mp4 and replace the .asset-slot div with:
+             <video controls preload="none" playsinline poster="assets/img/campaign/video-poster.jpg"><source src="assets/video/campaign-ads.mp4" type="video/mp4"></video> -->
+        <figure class="campaign-item campaign-item--wide reveal">
+          <div class="asset-slot asset-slot--wide asset-slot--video" style="background-image:url('assets/img/campaign/video-poster.jpg')"><strong>Advertisement created — video</strong><span>Video file to be added</span></div>
+          <figcaption class="campaign-claim">This ad in regional languages can change the lives of many visionless.</figcaption>
+        </figure>
+
+        <figure class="campaign-item campaign-item--wide campaign-item--dc reveal">
+          <a href="assets/img/campaign/dc.jpg" data-lightbox><img src="assets/img/campaign/dc.jpg" alt="Lagatar News, 18 October 2024: Jamshedpur Deputy Commissioner appreciates the Chirag Indians eye donation campaign; Om Maddala presents the poem to the DC" loading="lazy" width="768" height="924"></a>
+          <figcaption>Memento presented to the District Collector — Lagatar News, October 2024</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -397,7 +351,7 @@
         <a class="pin" data-cat="ground" href="assets/img/community/02.jpg" data-caption="Community pledges"><img src="assets/img/community/thumb/02.jpg" alt="Community members who pledged their eyes with Chirag Indians" loading="lazy" width="540" height="720"><span class="pin__cap"><small>On ground</small>Community pledges</span></a>
         <a class="pin" data-cat="spreading" href="assets/img/standee/02.jpg" data-caption="Standee and billboards"><img src="assets/img/standee/thumb/02.jpg" alt="Volunteers setting up a Chirag Indians standee in an apartment complex" loading="lazy" width="720" height="540"><span class="pin__cap"><small>Spreading the word</small>Standee and billboards</span></a>
         <a class="pin pin--video" data-cat="spreading" href="assets/video/support.mp4" data-poster="assets/video/support.jpg" data-caption="College student video"><img src="assets/video/support.jpg" alt="College student video (video)" loading="lazy"><span class="pin__cap"><small>Video · Spreading the word</small>College student video</span></a>
-        <div class="pin pin--placeholder" data-cat="recognition"><strong>President memento</strong>Photos coming soon</div>
+        <a class="pin" data-cat="recognition" href="assets/img/president-poetry.jpg" data-caption="President memento"><img src="assets/img/campaign/thumb/president-poetry.jpg" alt="Poem dedicated to the Hon'ble President of India by Chirag Indians" loading="lazy" width="375" height="530"><span class="pin__cap"><small>Recognition</small>President memento</span></a>
         <a class="pin" data-cat="ground" href="assets/img/old-age-home/03.jpg" data-caption="Old age home pledges"><img src="assets/img/old-age-home/thumb/03.jpg" alt="Residents of a senior citizens&#x27; home in Jamshedpur holding their eye donation pledge forms" loading="lazy" width="720" height="540"><span class="pin__cap"><small>On ground</small>Old age home pledges</span></a>
         <a class="pin" data-cat="ground" href="assets/img/nimhans/03.jpg" data-caption="NIMHANS donation drive"><img src="assets/img/nimhans/thumb/03.jpg" alt="Chirag Indians volunteers distributing food packets to patients and families outside NIMHANS, Bengaluru" loading="lazy" width="720" height="405"><span class="pin__cap"><small>On ground</small>NIMHANS donation drive</span></a>
         <a class="pin" data-cat="ground" href="assets/img/school/03.jpg" data-caption="School pledge event"><img src="assets/img/school/thumb/03.jpg" alt="Students receiving certificates for pledging their eyes at a school awareness event" loading="lazy" width="720" height="540"><span class="pin__cap"><small>On ground</small>School pledge event</span></a>
@@ -409,16 +363,18 @@
         <a class="pin" data-cat="ground" href="assets/img/school/04.jpg" data-caption="School pledge event"><img src="assets/img/school/thumb/04.jpg" alt="Students receiving certificates for pledging their eyes at a school awareness event" loading="lazy" width="720" height="540"><span class="pin__cap"><small>On ground</small>School pledge event</span></a>
         <a class="pin" data-cat="ground" href="assets/img/public-fridge/04.jpg" data-caption="Public fridge donation"><img src="assets/img/public-fridge/thumb/04.jpg" alt="Volunteers handing out food from a public community fridge" loading="lazy" width="540" height="720"><span class="pin__cap"><small>On ground</small>Public fridge donation</span></a>
         <a class="pin pin--video" data-cat="ground" href="assets/video/clip-3.mp4" data-poster="assets/video/clip-3.jpg" data-caption="Old age home pledges"><img src="assets/video/clip-3.jpg" alt="Old age home pledges (video)" loading="lazy"><span class="pin__cap"><small>Video · On ground</small>Old age home pledges</span></a>
-        <div class="pin pin--placeholder" data-cat="recognition"><strong>DC presentation</strong>Photos coming soon</div>
+        <a class="pin" data-cat="recognition" href="assets/img/campaign/dc.jpg" data-caption="DC presentation"><img src="assets/img/campaign/thumb/dc.jpg" alt="Om Maddala presenting the memento to the Jamshedpur Deputy Commissioner" loading="lazy" width="598" height="720"><span class="pin__cap"><small>Recognition</small>DC presentation</span></a>
         <a class="pin" data-cat="ground" href="assets/img/nimhans/05.jpg" data-caption="NIMHANS donation drive"><img src="assets/img/nimhans/thumb/05.jpg" alt="Chirag Indians volunteers distributing food packets to patients and families outside NIMHANS, Bengaluru" loading="lazy" width="720" height="405"><span class="pin__cap"><small>On ground</small>NIMHANS donation drive</span></a>
         <a class="pin" data-cat="ground" href="assets/img/school/05.jpg" data-caption="School pledge event"><img src="assets/img/school/thumb/05.jpg" alt="Students receiving certificates for pledging their eyes at a school awareness event" loading="lazy" width="720" height="540"><span class="pin__cap"><small>On ground</small>School pledge event</span></a>
         <a class="pin" data-cat="ground" href="assets/img/public-fridge/05.jpg" data-caption="Public fridge donation"><img src="assets/img/public-fridge/thumb/05.jpg" alt="Volunteers handing out food from a public community fridge" loading="lazy" width="540" height="720"><span class="pin__cap"><small>On ground</small>Public fridge donation</span></a>
         <a class="pin pin--video" data-cat="ground" href="assets/video/pledger-story.mp4" data-poster="assets/video/pledger-story.jpg" data-caption="A pledger shares her story"><img src="assets/video/pledger-story.jpg" alt="A pledger shares her story (video)" loading="lazy"><span class="pin__cap"><small>Video · On ground</small>A pledger shares her story</span></a>
-        <div class="pin pin--placeholder" data-cat="spreading"><strong>Poster movement</strong>Photos coming soon</div>
+        <a class="pin" data-cat="spreading" href="assets/img/campaign/marwari-ad.jpg" data-caption="Poster movement"><img src="assets/img/campaign/thumb/marwari-ad.jpg" alt="Eye donation poster with Marwari Mahila Manch" loading="lazy" width="508" height="720"><span class="pin__cap"><small>Spreading the word</small>Poster movement</span></a>
         <a class="pin" data-cat="ground" href="assets/img/old-age-home/06.jpg" data-caption="Old age home pledges"><img src="assets/img/old-age-home/thumb/06.jpg" alt="Residents of a senior citizens&#x27; home in Jamshedpur holding their eye donation pledge forms" loading="lazy" width="540" height="720"><span class="pin__cap"><small>On ground</small>Old age home pledges</span></a>
         <a class="pin" data-cat="ground" href="assets/img/school/07.jpg" data-caption="School pledge event"><img src="assets/img/school/thumb/07.jpg" alt="Students receiving certificates for pledging their eyes at a school awareness event" loading="lazy" width="720" height="540"><span class="pin__cap"><small>On ground</small>School pledge event</span></a>
         <a class="pin pin--video" data-cat="spreading" href="assets/video/standee.mp4" data-poster="assets/video/standee.jpg" data-caption="Standee setup"><img src="assets/video/standee.jpg" alt="Standee setup (video)" loading="lazy"><span class="pin__cap"><small>Video · Spreading the word</small>Standee setup</span></a>
-        <div class="pin pin--placeholder" data-cat="spreading"><strong>Featured ad with Roshni</strong>Photos coming soon</div>
+        <a class="pin" data-cat="spreading" href="assets/img/campaign/roshni-ad.jpg" data-caption="Featured ad with Roshni"><img src="assets/img/campaign/thumb/roshni-ad.jpg" alt="Advertisement featuring Roshni, Jamshedpur Eye Hospital" loading="lazy" width="509" height="720"><span class="pin__cap"><small>Spreading the word</small>Featured ad with Roshni</span></a>
+        <a class="pin" data-cat="spreading" href="assets/img/campaign/roshni-news.jpg" data-caption="Roshni in the news"><img src="assets/img/campaign/thumb/roshni-news.jpg" alt="Newspaper cutting about Roshni's cornea collection" loading="lazy" width="500" height="720"><span class="pin__cap"><small>Spreading the word</small>Roshni in the news</span></a>
+        <a class="pin" data-cat="spreading" href="assets/img/campaign/marwari-news.jpg" data-caption="Marwari Mahila Manch in the news"><img src="assets/img/campaign/thumb/marwari-news.jpg" alt="Newspaper report on the poster launch" loading="lazy" width="660" height="720"><span class="pin__cap"><small>Spreading the word</small>Marwari Mahila Manch in the news</span></a>
         <a class="pin" data-cat="ground" href="assets/img/old-age-home/07.jpg" data-caption="Old age home pledges"><img src="assets/img/old-age-home/thumb/07.jpg" alt="Residents of a senior citizens&#x27; home in Jamshedpur holding their eye donation pledge forms" loading="lazy" width="720" height="540"><span class="pin__cap"><small>On ground</small>Old age home pledges</span></a>
         <a class="pin" data-cat="ground" href="assets/img/nimhans/07.jpg" data-caption="NIMHANS donation drive"><img src="assets/img/nimhans/thumb/07.jpg" alt="Chirag Indians volunteers distributing food packets to patients and families outside NIMHANS, Bengaluru" loading="lazy" width="720" height="405"><span class="pin__cap"><small>On ground</small>NIMHANS donation drive</span></a>
         <a class="pin pin--video" data-cat="ground" href="assets/video/public-fridge.mp4" data-poster="assets/video/public-fridge.jpg" data-caption="Public fridge donation"><img src="assets/video/public-fridge.jpg" alt="Public fridge donation (video)" loading="lazy"><span class="pin__cap"><small>Video · On ground</small>Public fridge donation</span></a>
@@ -456,10 +412,10 @@
       <div>
         <h4>Act</h4>
         <ul>
-          <li><a href="https://notto.abdm.gov.in/" target="_blank" rel="noopener">Pledge your eyes (NOTTO) ↗</a></li>
-          <li><a href="#volunteer">Volunteer</a></li>
-          <li><a href="#sponsor">Sponsor a drive</a></li>
-          <li><a href="#corporates">For corporates</a></li>
+          <li><a href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener">Pledge your eyes (NOTTO) ↗</a></li>
+          <li><a href="#when-the-time-comes">When the time comes</a></li>
+          <li><a href="#campaign">How campaign works</a></li>
+          <li><a href="https://www.youtube.com/@AapKeJazbaaat" target="_blank" rel="noopener">Founder on YouTube ↗</a></li>
         </ul>
       </div>
       <div>
@@ -479,11 +435,11 @@
   </div>
 </footer>
 
-<a class="btn btn--primary sticky-pledge" href="https://notto.abdm.gov.in/" target="_blank" rel="noopener" aria-label="Pledge now on the NOTTO Donor Pledge Portal">
+<a class="btn btn--primary sticky-pledge" href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener" aria-label="Pledge now on the NOTTO Donor Pledge Portal">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
   Pledge Now
 </a>
 
-<script src="js/main.js?v=5"></script>
+<script src="js/main.js?v=6"></script>
 </body>
 </html>

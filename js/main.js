@@ -16,9 +16,10 @@ const SITE = {
 
   // Previous website, mentioned in "Who we are"
   website: "chiragindia.co.in",
+  youtube: "https://www.youtube.com/@AapKeJazbaaat",
 
   // Official pledge portal — every "Pledge Now" button links here
-  notto: "https://notto.abdm.gov.in/",
+  notto: "https://notto.mohfw.gov.in/",
 };
 
 /* --------------------------------------------------------------------------
@@ -83,7 +84,7 @@ const SITE = {
    Lightbox for .collage links (images + videos)
    -------------------------------------------------------------------------- */
 (function lightbox() {
-  const links = Array.from(document.querySelectorAll(".masonry a.pin:not(.pin--placeholder)"));
+  const links = Array.from(document.querySelectorAll(".masonry a.pin:not(.pin--placeholder), a[data-lightbox]"));
   if (!links.length) return;
 
   const box = document.createElement("div");
@@ -119,11 +120,13 @@ const SITE = {
       img.alt = a.querySelector("img")?.alt || "";
       media.appendChild(img);
     }
-    cap.textContent = `${a.dataset.caption || a.querySelector("img")?.alt || ""}  ·  ${idx + 1} / ${group.length}`;
+    const label = a.dataset.caption || a.querySelector("img")?.alt || "";
+    cap.textContent = group.length > 1 ? `${label}  ·  ${idx + 1} / ${group.length}` : label;
   };
   const open = (a) => {
     const wall = a.closest(".masonry");
-    group = Array.from(wall.querySelectorAll("a.pin:not(.pin--placeholder):not(.is-hidden)"));
+    group = wall ? Array.from(wall.querySelectorAll("a.pin:not(.pin--placeholder):not(.is-hidden)")) : [a];
+    box.classList.toggle("lightbox--single", group.length < 2);
     idx = group.indexOf(a);
     lastFocus = document.activeElement;
     box.classList.add("is-open");
@@ -195,5 +198,22 @@ const SITE = {
       chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
       pins.forEach((p) => p.classList.toggle("is-hidden", cat !== "all" && p.dataset.cat !== cat));
     });
+  });
+})();
+
+/* --------------------------------------------------------------------------
+   YouTube: load the iframe only when the viewer taps play
+   -------------------------------------------------------------------------- */
+(function youtube() {
+  document.querySelectorAll(".yt[data-yt]").forEach((box) => {
+    box.addEventListener("click", () => {
+      const id = box.dataset.yt;
+      const f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+      f.title = "YouTube video";
+      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      f.allowFullscreen = true;
+      box.innerHTML = ""; box.appendChild(f);
+    }, { once: true });
   });
 })();

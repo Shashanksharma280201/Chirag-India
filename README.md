@@ -16,14 +16,14 @@ The site is deployed from the `main` branch of the GitHub repo.
 
 | Path             | What it is                                              |
 |------------------|---------------------------------------------------------|
-| `index.html`     | The whole site: hero → the problem → myths → featured story → who we are → how campaign works → donate your eyes → FAQ → join → stories gallery |
+| `index.html`     | The whole site: hero → the problem → myths → featured story → who we are → donate your eyes → FAQ → how campaign works → stories gallery |
 | `css/style.css`  | All styling. Colours and fonts are variables at the top. |
 | `js/main.js`     | Nav, gallery filters, lightbox. Contact details live in the `SITE` block at the top. |
 | `assets/`        | Logo, web-sized photos (`img/<album>/`), transcoded videos (`video/`). |
 | `about.html` etc.| Tiny redirect stubs so old links still land on the right section. |
 
 Every **Pledge Now** button links to the official NOTTO Donor Pledge Portal
-(https://notto.abdm.gov.in/). There is no pledge form on the site.
+(https://notto.mohfw.gov.in/). There is no pledge form on the site.
 
 ## Changing colours or fonts
 
@@ -40,25 +40,17 @@ Edit the variables in `:root` at the top of `css/style.css`:
 WhatsApp number and email are placeholders. The helpline is NOTTO's toll-free
 1800-11-4770.
 
-**Photos and videos that are still missing.** Each spot in `index.html` is a
-dashed box with a label; search the file for `asset-slot` and `ASSET NEEDED`.
+**Media still missing.** Each spot in `index.html` is a dashed box with a
+label; search the file for `asset-slot` and `ASSET NEEDED`.
 
-| Where                         | What to add                                                   |
-|-------------------------------|---------------------------------------------------------------|
-| Featured story                | Photo of the framed poem dedicated to the Hon'ble President   |
-| How campaign works            | Hoarding at the golchakkar                                    |
-| How campaign works            | Roshni advertisement + newspaper cutting about it             |
-| How campaign works            | Marwari Mahila Manch advertisement + newspaper news about it  |
-| How campaign works            | The video ad (6 ads), ideally one MP4 under ~15 MB            |
-| How campaign works            | Picture with the DC                                           |
-| Stories gallery               | President memento, Sister award, DC presentation, Poster movement, Marwari Samaj photograph |
-| Who we are                    | Exact YouTube channel URL for Om Maddala (@aapkejazbaat) — currently a YouTube search link |
-| Hero                          | The "children praying" photo, if still wanted (a school pledge photo is used now) |
+| Where                | What to add                                                        |
+|----------------------|--------------------------------------------------------------------|
+| How campaign works   | The video advertisement (the 6 ads) — save as `assets/video/campaign-ads.mp4`, ideally under ~15 MB; a still from it is already used as the poster |
+| Stories gallery      | Sister award presentation, Marwari Samaj photograph                |
+| Hero                 | The "children praying" photo, if still wanted (a school pledge photo is used now) |
 
-To place a photo: save it under `assets/img/campaign/` (or `assets/img/`),
-then replace the matching `<div class="asset-slot">…</div>` with
-`<img src="assets/img/campaign/hoarding.jpg" alt="…">`. For the video, use
-`<video controls playsinline src="assets/video/campaign-ads.mp4"></video>`.
+To place the video, replace the dashed box in the campaign section with
+`<video controls playsinline poster="assets/img/campaign/video-poster.jpg" src="assets/video/campaign-ads.mp4"></video>`.
 
 ## Adding a photo to the gallery
 
