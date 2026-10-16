@@ -338,18 +338,16 @@
       </div>
 
 
-      <!-- ASSET NEEDED: the video advertisement. Save it as assets/video/campaign-ads.mp4 and replace the .cvideo__slot div with:
-           <video controls preload="none" playsinline poster="assets/img/campaign/video-poster.jpg"><source src="assets/video/campaign-ads.mp4" type="video/mp4"></video> -->
       <div class="cvideo reveal">
         <div class="cvideo__text">
           <span class="ctile__tag">Video advertisement</span>
           <p class="campaign-claim">This ad in regional languages can change the lives of many visionless.</p>
         </div>
         <div class="cvideo__media">
-          <div class="cvideo__slot" style="background-image:url('assets/img/campaign/video-poster.jpg')">
-            <span class="cvideo__play" aria-hidden="true">▶</span>
-            <span class="cvideo__note">Video file to be added</span>
-          </div>
+          <video controls preload="metadata" playsinline poster="assets/img/campaign/video-poster.jpg">
+            <source src="assets/video/campaign-ads.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>

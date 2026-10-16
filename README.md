@@ -45,13 +45,8 @@ label; search the file for `asset-slot` and `ASSET NEEDED`.
 
 | Where                | What to add                                                        |
 |----------------------|--------------------------------------------------------------------|
-| How campaign works   | The video advertisement — save as `assets/video/campaign-ads.mp4`, ideally under ~15 MB; a still from it is already used as the poster |
-| How campaign works   | Newspaper cutting of the Marwari Mahila Manch initiative with the photo of Smt. Sharda Devi Bhartiya — save as `assets/img/campaign/marwari-lady-news.jpg` |
 | Footer               | The new website address — set `website` in the `SITE` block of `js/main.js` |
 | Hero                 | The "children praying" photo, if still wanted (a school pledge photo is used now) |
-
-To place the video, replace the dashed box in the campaign section with
-`<video controls playsinline poster="assets/img/campaign/video-poster.jpg" src="assets/video/campaign-ads.mp4"></video>`.
 
 ## Adding a photo to the gallery
 
