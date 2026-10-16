@@ -158,8 +158,10 @@ p { margin: 0 0 1em; }
     radial-gradient(60% 50% at 20% 70%, rgba(15, 124, 134, 0.45), transparent 70%);
 }
 .hero__content { padding-block: clamp(80px, 12vw, 140px) clamp(56px, 8vw, 96px); max-width: min(900px, 100%); }
-.hero__tag { display: inline-block; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: clamp(0.95rem, 1.3vw, 1.15rem); color: var(--amber); margin-bottom: 1rem; }
+.hero__tag { display: inline-block; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: clamp(0.95rem, 1.3vw, 1.15rem); margin-bottom: 1rem; }
 .hero h1 { margin-bottom: 0.5em; color: var(--white); }
+/* Light aqua instead of amber on the photo: amber blended into the warm tones behind it */
+.hero__tag, .hero h1 em { color: #8ff0f0; text-shadow: 0 2px 14px rgba(4, 34, 38, 0.75); }
 .hero__sub { font-size: clamp(1.15rem, 2.2vw, 1.55rem); font-weight: 500; color: rgba(255, 255, 255, 0.92); max-width: 34ch; margin-bottom: 1.6em; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .hero__note { margin-top: 1.5rem; font-size: 0.98rem; color: rgba(255, 255, 255, 0.7); }
@@ -483,3 +485,12 @@ fieldset legend { font-family: var(--font-display); font-weight: 600; font-size:
 .cvideo__slot::after { content: ""; position: absolute; inset: 0; background: rgba(7, 62, 69, 0.55); z-index: -1; }
 .cvideo__play { width: 64px; height: 64px; border-radius: 50%; background: var(--amber); color: var(--ink); display: grid; place-items: center; font-size: 1.4rem; padding-left: 5px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }
 .cvideo__note { font-size: 0.85rem; font-weight: 600; opacity: 0.9; }
+
+/* Featured story: newspaper cutting under the caption */
+.story__news { display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: center; margin-top: 1.4rem; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); text-decoration: none; color: var(--ink-soft); box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.story__news:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.story__news img { width: 150px; height: 120px; object-fit: cover; object-position: top; border-radius: 10px; }
+.story__news span { font-size: 0.95rem; font-weight: 600; }
+@media (max-width: 480px) { .story__news { grid-template-columns: 1fr; } .story__news img { width: 100%; height: auto; } }
+.ctile--static:hover { transform: none; box-shadow: var(--shadow); }
+.ctile--static .asset-slot { min-height: 0; height: 100%; }

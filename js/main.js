@@ -12,11 +12,11 @@ const SITE = {
 
   // NGO contact (placeholders — replace with real values)
   whatsapp: "910000000000",             // WhatsApp number in international format, digits only
-  email: "hello@chiragindians.in",      // contact email
+  email: "chiragindiainfo@gmail.com",   // contact email
 
   // Previous website, mentioned in "Who we are"
-  website: "chiragindia.co.in",
-  youtube: "https://www.youtube.com/@AapKeJazbaaat",
+  website: "",                          // NEW website address — fill in once the domain is decided
+  youtube: "https://www.youtube.com/channel/UCz-5CVQ9vs_Ac6_wRS551SA",
 
   // Official pledge portal — every "Pledge Now" button links here
   notto: "https://notto.mohfw.gov.in/",
@@ -35,6 +35,7 @@ const SITE = {
   document.querySelectorAll("[data-site]").forEach((el) => {
     const key = el.getAttribute("data-site");
     if (key in map) el.textContent = map[key];
+    if (key in map && !map[key]) el.closest("li")?.remove();
   });
   document.querySelectorAll("[data-site-href]").forEach((el) => {
     const key = el.getAttribute("data-site-href");
