@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body id="top">
 
@@ -118,18 +118,20 @@
   <section class="section" aria-labelledby="story-title">
     <div class="wrap">
       <div class="story">
-        <a class="story__photo story__photo--frame reveal" href="assets/img/president-poetry.jpg" data-lightbox>
-          <img src="assets/img/president-poetry.jpg" alt="Poem 'Netra ki Lalsa' dedicated to the Hon'ble President of India, Smt. Droupadi Murmu, by Chirag Indians" loading="lazy" width="375" height="530">
-        </a>
+        <div class="story__media">
+          <a class="story__photo story__photo--frame reveal" href="assets/img/president-poetry.jpg" data-lightbox>
+            <img src="assets/img/president-poetry.jpg" alt="Poem 'Netra ki Lalsa' dedicated to the Hon'ble President of India, Smt. Droupadi Murmu, by Chirag Indians" loading="lazy" width="375" height="530">
+          </a>
+          <a class="story__news reveal" href="assets/img/campaign/marwari-news.jpg" data-lightbox data-caption="In the news: launch of the poster and poem dedicated to the President">
+            <img src="assets/img/campaign/marwari-news.jpg" alt="Newspaper report: launch of the eye donation poster and poem dedicated to the President at Sakchi Ashirwad old age home, Jamshedpur" loading="lazy" width="768" height="838">
+            <span>In the news: the poster and poem launched at Sakchi Ashirwad, Jamshedpur</span>
+          </a>
+        </div>
         <div class="reveal">
           <span class="eyebrow">Featured story</span>
           <h2 id="story-title" class="display-md">President memento — <em>our first brand ambassador</em></h2>
           <p class="lead">Hon'ble President of India, Smt. Droupadi Murmu, was our first brand ambassador (unofficially).</p>
           <p class="lead">She also has pledged her eyes. Her office gracefully accepted our efforts.</p>
-          <a class="story__news reveal" href="assets/img/campaign/marwari-news.jpg" data-lightbox data-caption="In the news: launch of the poster and poem dedicated to the President">
-            <img src="assets/img/campaign/marwari-news.jpg" alt="Newspaper report: launch of the eye donation poster and poem dedicated to the President at Sakchi Ashirwad old age home, Jamshedpur" loading="lazy" width="768" height="838">
-            <span>In the news: the poster and poem launched at Sakchi Ashirwad, Jamshedpur</span>
-          </a>
           <p style="margin-top:1.4rem"><a class="btn btn--teal" href="#stories">See more stories →</a></p>
         </div>
       </div>
@@ -312,14 +314,11 @@
           <span class="ctile__cap"><strong>With Marwari Mahila Manch</strong>Jamshedpur</span>
         </a>
 
-        <!-- ASSET NEEDED: newspaper cutting of the Marwari Mahila Manch initiative with the photo of Smt. Sharda Devi Bhartiya.
-             Save as assets/img/campaign/marwari-lady-news.jpg and replace the .asset-slot span with:
-             <img src="assets/img/campaign/marwari-lady-news.jpg" alt="Newspaper cutting: even after death, the world will see the eyes of Sharda Devi Bhartiya — a Marwari Mahila Manch initiative" loading="lazy"> -->
-        <span class="ctile ctile--static reveal">
+        <a class="ctile reveal" href="assets/img/campaign/marwari-lady-news.jpg" data-lightbox data-caption="In the news: Marwari Mahila Manch initiative — Smt. Sharda Devi Bhartiya">
           <span class="ctile__tag">Newspaper</span>
-          <span class="ctile__media"><span class="asset-slot"><strong>Marwari Mahila Manch in the news</strong>Cutting with Smt. Sharda Devi Bhartiya — image to be added</span></span>
+          <span class="ctile__media"><img src="assets/img/campaign/marwari-lady-news.jpg" alt="News: even after death, the world will see the eyes of Smt. Sharda Devi Bhartiya — a Marwari Mahila Manch, Jamshedpur initiative" loading="lazy" width="444" height="420"></span>
           <span class="ctile__cap"><strong>Marwari Mahila Manch in the news</strong>Even after death, the world will see her eyes</span>
-        </span>
+        </a>
 
         <a class="ctile reveal" href="assets/img/campaign/dc.jpg" data-lightbox data-caption="Memento presented to the District Collector — Lagatar News, October 2024">
           <span class="ctile__tag">Recognition</span>
